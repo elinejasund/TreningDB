@@ -1,0 +1,117 @@
+-- Legg inn treningssenter, saler, noen sykler, noen brukere, noen trenere og treninger som nevnt over.
+-- Her er trenere lagt inn som et form for medlem innenfor gruppetimen
+
+--Treningsentere 
+INSERT INTO center VALUES
+(1, "Vangslundsgate 2, 7030, Trondheim", "Øya treningssenter", 1, 1),
+(2, "Moholt allmenning 12, 7050, Trondheim", "Moholt treningssenter", 0, 1),
+(3, "Chr. Frederiks gate 20, 7030, Trondheim", "Gløshaugen idrettsbygg", 1, 1),
+(4, "Loholt allé 81, 7049, Trondheim", "Dragvoll idrettssenter", 1, 1);
+
+-- Saler
+INSERT INTO room VALUES
+(1, 1, "spinningssal", 40),
+(2, 1, "gruppetreningssal", 30),
+(3, 1, "gruppetreningssal", 45),
+(4, 1, "gruppetreningssal", 15),
+(5, 4, "spinningssal", 20);
+
+
+-- Sykler
+INSERT INTO bike VALUES
+(1, 1, "Titan Life Indoor Bike S72", 0),
+(2, 1, "Titan Life Indoor Bike S72", 0),
+(3, 1, "Titan Life Indoor Bike S72", 0),
+(4, 1, "Titan Life Indoor Bike S72", 0),
+(5, 1, "Titan Life Indoor Bike S72", 0),
+(6, 1, "Titan Life Indoor Bike S72", 0),
+(7, 1, "Titan Life Indoor Bike S72", 0),
+(8, 1, "Titan Life Indoor Bike S72", 0),
+(9, 1, "Titan Life Indoor Bike S72", 0),
+(10, 1, "Titan Life Indoor Bike S72", 0),
+(11, 1, "Titan Life Indoor Bike S72", 0),
+(12, 1, "Titan Life Indoor Bike S72", 0),
+(13, 1, "Titan Life Indoor Bike S72", 0),
+(14, 1, "Titan Life Indoor Bike S72", 0),
+(15, 1, "Titan Life Indoor Bike S72", 0),
+(16, 1, "Titan Life Indoor Bike S72", 0),
+(17, 1, "Titan Life Indoor Bike S72", 0),
+(18, 1, "Titan Life Indoor Bike S72", 0),
+(19, 1, "Titan Life Indoor Bike S72", 0),
+(20, 1, "Titan Life Indoor Bike S72", 0),
+(21, 1, "Titan Life Indoor Bike S72", 0),
+(22, 1, "Titan Life Indoor Bike S72", 0),
+(23, 1, "Titan Life Indoor Bike S72", 0),
+(24, 1, "Titan Life Indoor Bike S72", 0),
+(25, 1, "Titan Life Indoor Bike S72", 0),
+(26, 1, "Titan Life Indoor Bike S72", 0),
+(27, 1, "Titan Life Indoor Bike S72", 0),
+(28, 1, "Titan Life Indoor Bike S72", 0),
+(29, 1, "Titan Life Indoor Bike S72", 0),
+(30, 1, "Titan Life Indoor Bike S72", 0),
+(31, 1, "Titan Life Indoor Bike S72", 0),
+(32, 1, "Titan Life Indoor Bike S72", 0),
+(33, 1, "Titan Life Indoor Bike S72", 0),
+(34, 1, "Titan Life Indoor Bike S72", 0),
+(35, 1, "Titan Life Indoor Bike S72", 0),
+(36, 1, "Titan Life Indoor Bike S72", 0),
+(37, 1, "Titan Life Indoor Bike S72", 0),
+(38, 1, "Titan Life Indoor Bike S72", 0),
+
+(39, 5, "ICG IC7", 1),
+(40, 5, "ICG IC7", 1),
+(41, 5, "ICG IC7", 1),
+(42, 5, "ICG IC7", 1),
+(43, 5, "ICG IC7", 1),
+(44, 5, "ICG IC7", 1),
+(45, 5, "ICG IC7", 1),
+(46, 5, "ICG IC7", 1),
+(47, 5, "ICG IC7", 1),
+(48, 5, "ICG IC7", 1),
+(49, 5, "ICG IC7", 1),
+(50, 5, "ICG IC7", 1),
+(51, 5, "ICG IC7", 1),
+(52, 5, "ICG IC7", 1),
+(53, 5, "ICG IC7", 1),
+(54, 5, "ICG IC7", 1),
+(55, 5, "ICG IC7", 1),
+(56, 5, "ICG IC7", 1),
+(57, 5, "ICG IC7", 1),
+(58, 5, "ICG IC7", 1);
+
+-- Brukere
+INSERT INTO Member VALUES
+(2, "Gina Giske", "gina.giske@ntnu.no", "22334455"),
+(3, "Catrin Johansen", "catrin-johansen@ntnu.no", "33445566"),
+(4, "Tobi Haugrønning", "tbh@ntnu.no", "44556677"),
+(5, "Erlend Jåsund", "ej@ntnu.no", "55667788"),
+(6, "Eirik Jåsund", "eikj@ntnu.no", "66778899"),
+(7, "Are Saltnes Tømmerås", "are.sal.tøm@ntnu.no", "10101010"),
+(8, "Lars Tangen", "lartanfg@ntnu.no", "45454545"),
+(9, "Merete Jåsund", "meretejaas@ntnu.no", "23232323"),
+(10, "Sofie Hjelle", "sofhjelle@ntnu.no", "12121212"),
+(11, "Johnny John", "johnny@stud.ntnu.no", "00000000");
+
+-- Gruppetimer
+INSERT INTO group_lesson (id, room_id, capacity, time, instructor) VALUES
+-- 16 March
+(1, 1, 38, '2025-03-16 07:00', 1),
+(2, 5, 20, '2025-03-16 16:30', 1),
+(3, 1, 38, '2025-03-16 16:30', 2),
+(4, 1, 38, '2025-03-16 17:40', 2),
+(5, 1, 38, '2025-03-16 19:00', 2),
+
+-- 17 March
+(6, 1, 38, '2025-03-17 07:00', 1),
+(7, 1, 38, '2025-03-17 18:30', 2),
+(8, 1, 38, '2025-03-17 19:45', 3),
+
+-- 18 March
+(9, 1, 38, '2025-03-18 16:15', 3),
+(10, 5, 20, '2025-03-18 16:30', 3),
+(11, 1, 38, '2025-03-18 17:30', 1),
+(12, 1, 38, '2025-03-18 18:30', 1),
+(13, 1, 38, '2025-03-18 19:30', 2);
+
+
+
