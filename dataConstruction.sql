@@ -113,5 +113,18 @@ INSERT INTO group_lesson (id, room_id, capacity, time, instructor) VALUES
 (12, 1, 38, '2025-03-18 18:30', 1),
 (13, 1, 38, '2025-03-18 19:30', 2);
 
-
+-- Øya facilities
+INSERT INTO facility (center_id, type) VALUES
+(1, 'Gruppetrening'),
+(1, 'Egentrening'),
+(1, 'Utholdenhet'),
+(1, 'Styrke'),
+(1, 'Yoga'),
+(1, 'Klatring'),
+(1, 'Spinning'),
+(1, 'Hall'),
+(1, 'Garderober'),
+(1, 'Badstue'),
+(1, 'Dusj'),
+(1, 'Ubemannet treningssenter');
 
