@@ -24,6 +24,9 @@ def getWeeklySchedule(start_day: int | str, week: int):
     print(start_datetime)
     print(end_datetime)
 
+    # Should the output be from visit or group lesson?
+    # Task says "training sessions", unsure what this means.
+
     with sqlite3.connect("DB2.db") as con:
         cur = con.cursor()
         query = """
@@ -32,7 +35,7 @@ def getWeeklySchedule(start_day: int | str, week: int):
         WHERE time BETWEEN ? AND ?
         ORDER BY time
         """
-        cur.execute(query, (datetime(2025,1,1), datetime(2026,1,1)))
+        cur.execute(query, (start_datetime, end_datetime))
 
         # To get a prettier output:
         rows = cur.fetchall()
