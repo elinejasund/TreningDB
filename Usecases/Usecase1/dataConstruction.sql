@@ -128,3 +128,6 @@ INSERT INTO facility (center_id, type) VALUES
 (1, 'Dusj'),
 (1, 'Ubemannet treningssenter');
 
+--Usecase 2
+INSERT INTO activity_type VALUES (1, "Spin60", "En variert spinningtime som er noe mer utfordrende enn Spin45 med lengre varighet og tidvis høyere tempo. Du styrer likevel intensiteten selv, og timen passer alle som liker å tråkke i takt! Timen inneholder 2-4 arbeidsperioder med variert løype.");
+INSERT INTO lesson_types VALUES (7, 1);

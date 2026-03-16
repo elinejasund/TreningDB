@@ -163,6 +163,7 @@ CREATE TABLE team_room_booking_participates (
 CREATE TABLE group_lesson_booking (
   member_id INTEGER NOT NULL,
   group_lesson_id INTEGER NOT NULL,
+  time_booked DATETIME NOT NULL,
   FOREIGN KEY (member_id) REFERENCES member(id),
   FOREIGN KEY (group_lesson_id) REFERENCES group_lesson(id),
   PRIMARY KEY (member_id, group_lesson_id)
