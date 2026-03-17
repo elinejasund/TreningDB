@@ -3,7 +3,14 @@ import sqlite3
 # open the file – use the correct relative/absolute path
 with sqlite3.connect("DB2.db") as con:      # or "../DB2.db" depending on cwd
     cur = con.cursor()
-    cur.execute("SELECT * FROM visit WHERE member_id=?", ("11",))
-    print(cur.fetchall())
+    cur.execute("SELECT * FROM member WHERE mail LIKE 'johnny@stud.ntnu.no'")
+    member_row = cur.fetchone()
+    if not member_row:
+        print("User not found")
+        con.close()
+        exit(1)
+    johnny_id = member_row[0]
 
-# Why is only one date fetched?
+    # cur.execute("SELECT member FROM visit WHERE member_id = ?", (johnny_id,))
+
+    print(member_row)
