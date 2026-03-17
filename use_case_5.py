@@ -11,6 +11,7 @@ with sqlite3.connect("DB2.db") as con:      # or "../DB2.db" depending on cwd
         exit(1)
     johnny_id = member_row[0]
 
+    # Må hente fra group_lesson participates, for å kunne hente ut hvilken gruppetime han har vært med på
     # cur.execute("SELECT member FROM visit WHERE member_id = ?", (johnny_id,))
 
     print(member_row)
