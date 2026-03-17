@@ -16,7 +16,6 @@ INSERT INTO room VALUES
 (4, 1, "gruppetreningssal", 15),
 (5, 4, "spinningssal", 20);
 
-
 -- Sykler
 INSERT INTO bike VALUES
 (1, 1, "Titan Life Indoor Bike S72", 0),
@@ -138,4 +137,9 @@ INSERT INTO visit (member_id, center_id, date) VALUES
 ('11', '1', '2026-01-03'),
 ('11', '1', '2026-01-05'),
 ('11', '1', '2026-01-07'),
-('11', '1', '2026-01-09'),
+('11', '1', '2026-01-09');
+
+INSERT INTO group_lesson_participates (member_id, group_lesson_id, date) VALUES
+('11', '1', '2025-03-16'),
+('11', '6', '2025-03-17'),
+('11', '9', '2025-03-18');
