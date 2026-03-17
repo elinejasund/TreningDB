@@ -21,11 +21,7 @@ def getWeeklySchedule(start_day: int | str, week: int):
     end_date = date.fromisocalendar(2025, week + 1, Weekday.MONDAY.value)
     end_datetime = datetime(end_date.year, end_date.month, end_date.day)
 
-    print(start_datetime)
-    print(end_datetime)
-
-    # Should the output be from visit or group lesson?
-    # Task says "training sessions", unsure what this means.
+    # Assumes that group lesson is the table of interest
 
     with sqlite3.connect("DB2.db") as con:
         cur = con.cursor()
