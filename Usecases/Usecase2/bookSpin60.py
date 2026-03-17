@@ -55,7 +55,7 @@ if cursor.fetchone()[0] > 0:
     exit(1)
 
 # Insert booking
-cursor.execute("INSERT INTO group_lesson_booking (member_id, group_lesson_id, date) VALUES (?, ?, datetime('now'))", (member_id, lesson_id))
+cursor.execute("INSERT INTO group_lesson_booking (member_id, group_lesson_id, time_booked) VALUES (?, ?, datetime('now'))", (member_id, lesson_id))
 con.commit()
 
 print("Booking successful")
