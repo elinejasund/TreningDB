@@ -16,11 +16,11 @@ lesson AS (
       AND lesson_types.activity_type_id = (SELECT activity_id FROM activity_id)
 ),
 current_booked_count AS (
-    SELECT COUNT(*) count FROM group_lesson_participates 
+    SELECT COUNT(*) count FROM group_lesson_booking 
     WHERE group_lesson_id = (SELECT lesson_id FROM lesson)
 ),
 capacity_count AS (
-    SELECT COUNT(*) count FROM group_lesson_participates 
+    SELECT COUNT(*) count FROM group_lesson_booking 
     WHERE member_id = (SELECT member_id FROM student_id) 
       AND group_lesson_id = (SELECT lesson_id FROM lesson)
 )

@@ -38,24 +38,15 @@ if not lesson_row:
     exit(1)
 lesson_id, capacity = lesson_row
 
-# Check current participants
-cursor.execute("SELECT COUNT(*) FROM group_lesson_booking WHERE group_lesson_id = ?", (lesson_id,))
-current_count = cursor.fetchone()[0]
-
-if current_count >= capacity:
-    print("Training is full")
-    con.close()
-    exit(1)
-
-# Check if already booked
-cursor.execute("SELECT COUNT(*) FROM group_lesson_booking WHERE member_id = ? AND group_lesson_id = ?", (member_id, lesson_id))
+# Check if already registered
+cursor.execute("SELECT COUNT(*) FROM group_lesson_participates WHERE member_id = ? AND group_lesson_id = ?", (member_id, lesson_id))
 if cursor.fetchone()[0] > 0:
     print("Already booked")
     con.close()
     exit(1)
 
-# Insert booking
-cursor.execute("INSERT INTO group_lesson_booking (member_id, group_lesson_id, date) VALUES (?, ?, datetime('now'))", (member_id, lesson_id))
+# Insert registration
+cursor.execute("INSERT INTO group_lesson_participates (member_id, group_lesson_id, date) VALUES (?, ?, datetime('now'))", (member_id, lesson_id))
 con.commit()
 
 print("Booking successful")
