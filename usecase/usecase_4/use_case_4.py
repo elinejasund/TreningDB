@@ -38,4 +38,6 @@ def getWeeklySchedule(start_day: int | str, week: int):
         for row in rows:
             print(row[0])
 
+# Assumes that the task asks for the schedule of the 12th week of 2025, starting on the input day
+
 getWeeklySchedule("monday", 12)
