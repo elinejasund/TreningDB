@@ -112,7 +112,7 @@ INSERT OR IGNORE INTO group_lesson (id, room_id, capacity, time, instructor) VAL
 (12, 1, 38, '2025-03-18 18:30', 1),
 (13, 1, 38, '2025-03-18 19:30', 2);
 
--- Øya facilities
+-- Center facilities
 INSERT OR IGNORE INTO facility (center_id, type) VALUES
 (1, 'Gruppetrening'),
 (1, 'Egentrening'),
@@ -125,11 +125,57 @@ INSERT OR IGNORE INTO facility (center_id, type) VALUES
 (1, 'Garderober'),
 (1, 'Badstue'),
 (1, 'Dusj'),
-(1, 'Ubemannet treningssenter');
+(1, 'Ubemannet treningssenter'),
+(1, 'Tilgjengelighet'),
+(2, 'Egentrening'),
+(2, 'Ubemannet treningssenter'),
+(2, 'Styrketrening'),
+(2, 'Utholdenhet'),
+(2, 'Tilgjengelighet'),
+(3, 'Egentrening'),
+(3, 'Gruppetrening'),
+(3, 'Styrketrening'),
+(3, 'Utholdenhet'),
+(3, 'Hall'),
+(3, 'Yoga'),
+(3, 'Dusj'),
+(3, 'Garderober'),
+(3, 'Badstue'),
+(3, 'Bemannet treningssenter'),
+(3, 'Tilgjengelighet'),
+(4, 'Egentrening'),
+(4, 'Spinning'),
+(4, 'Squash'),
+(4, 'Hall'),
+(4, 'Yoga'),
+(4, 'Dusj'),
+(4, 'Garderober'),
+(4, 'Badstue'),
+(4, 'Bemannet treningssenter'),
+(4, 'Tilgjengelighet');
+
+-- Group lesson types
+INSERT OR IGNORE INTO lesson_types (lesson_id, activity_type_id) VALUES
+(1, 4),
+(2, 2),
+(3, 3),
+(4, 1),
+(5, 1),
+(6, 3),
+(7, 1),
+(8, 2),
+(9, 1),
+(10, 4),
+(11, 2),
+(12, 3),
+(13, 3);
 
 --Usecase 2
-INSERT OR IGNORE INTO activity_type VALUES (1, "Spin60", "En variert spinningtime som er noe mer utfordrende enn Spin45 med lengre varighet og tidvis høyere tempo. Du styrer likevel intensiteten selv, og timen passer alle som liker å tråkke i takt! Timen inneholder 2-4 arbeidsperioder med variert løype.");
-INSERT OR IGNORE INTO lesson_types VALUES (7, 1);
+INSERT OR IGNORE INTO activity_type (id, name, description) VALUES 
+(1, "Spin60", "En variert spinningtime som er noe mer utfordrende enn Spin45 med lengre varighet og tidvis høyere tempo. Du styrer likevel intensiteten selv, og timen passer alle som liker å tråkke i takt! Timen inneholder 2-4 arbeidsperioder med variert løype."),
+(2, "Spin45", "En variert spinningtime med 2-3 arbeidsperioder som passer for alle. Perfekt for deg som er ny på spinning! Du styrer intensiteten selv, og vi bruker takta til å tråkke oss gjennom timen."),
+(3, "Spin8x3", "En forutsigbar intervalltime med 8 intervaller på 3 minutter hver, der du sitter og står annethvert drag. 90-120 sek pause mellom hvert intervall. God oppvarming og nedsykling inkludert."),
+(4, "Spin4x4", "En forutsigbar intervalltime: 4 stående intervaller på 4 minutter hver, med ca 2 minutter aktiv pause mellom hvert drag. God oppvarming og nedsykling inkludert.");
 
 -- Use case 5
 INSERT OR IGNORE INTO visit (member_id, center_id, date) VALUES
