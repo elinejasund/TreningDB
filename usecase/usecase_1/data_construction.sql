@@ -2,14 +2,14 @@
 -- Her er trenere lagt inn som et form for medlem innenfor gruppetimen
 
 --Treningsentere 
-INSERT INTO center VALUES
+INSERT OR IGNORE INTO center VALUES
 (1, "Vangslundsgate 2, 7030, Trondheim", "Øya treningssenter", 1, 1),
 (2, "Moholt allmenning 12, 7050, Trondheim", "Moholt treningssenter", 0, 1),
 (3, "Chr. Frederiks gate 20, 7030, Trondheim", "Gløshaugen idrettsbygg", 1, 1),
 (4, "Loholt allé 81, 7049, Trondheim", "Dragvoll idrettssenter", 1, 1);
 
 -- Saler
-INSERT INTO room VALUES
+INSERT OR IGNORE INTO room VALUES
 (1, 1, "spinningssal", 40),
 (2, 1, "gruppetreningssal", 30),
 (3, 1, "gruppetreningssal", 45),
@@ -17,7 +17,7 @@ INSERT INTO room VALUES
 (5, 4, "spinningssal", 20);
 
 -- Sykler
-INSERT INTO bike VALUES
+INSERT OR IGNORE INTO bike VALUES
 (1, 1, "Titan Life Indoor Bike S72", 0),
 (2, 1, "Titan Life Indoor Bike S72", 0),
 (3, 1, "Titan Life Indoor Bike S72", 0),
@@ -79,7 +79,7 @@ INSERT INTO bike VALUES
 (58, 5, "ICG IC7", 1);
 
 -- Brukere
-INSERT INTO member VALUES
+INSERT OR IGNORE INTO member VALUES
 (2, "Gina Giske", "gina.giske@ntnu.no", "22334455"),
 (3, "Catrin Johansen", "catrin-johansen@ntnu.no", "33445566"),
 (4, "Tobi Haugrønning", "tbh@ntnu.no", "44556677"),
@@ -92,7 +92,7 @@ INSERT INTO member VALUES
 (11, "Johnny John", "johnny@stud.ntnu.no", "00000000");
 
 -- Gruppetimer
-INSERT INTO group_lesson (id, room_id, capacity, time, instructor) VALUES
+INSERT OR IGNORE INTO group_lesson (id, room_id, capacity, time, instructor) VALUES
 -- 16 March
 (1, 1, 38, '2025-03-16 07:00', 1),
 (2, 5, 20, '2025-03-16 16:30', 1),
@@ -113,7 +113,7 @@ INSERT INTO group_lesson (id, room_id, capacity, time, instructor) VALUES
 (13, 1, 38, '2025-03-18 19:30', 2);
 
 -- Øya facilities
-INSERT INTO facility (center_id, type) VALUES
+INSERT OR IGNORE INTO facility (center_id, type) VALUES
 (1, 'Gruppetrening'),
 (1, 'Egentrening'),
 (1, 'Utholdenhet'),
@@ -128,18 +128,18 @@ INSERT INTO facility (center_id, type) VALUES
 (1, 'Ubemannet treningssenter');
 
 --Usecase 2
-INSERT INTO activity_type VALUES (1, "Spin60", "En variert spinningtime som er noe mer utfordrende enn Spin45 med lengre varighet og tidvis høyere tempo. Du styrer likevel intensiteten selv, og timen passer alle som liker å tråkke i takt! Timen inneholder 2-4 arbeidsperioder med variert løype.");
-INSERT INTO lesson_types VALUES (7, 1);
+INSERT OR IGNORE INTO activity_type VALUES (1, "Spin60", "En variert spinningtime som er noe mer utfordrende enn Spin45 med lengre varighet og tidvis høyere tempo. Du styrer likevel intensiteten selv, og timen passer alle som liker å tråkke i takt! Timen inneholder 2-4 arbeidsperioder med variert løype.");
+INSERT OR IGNORE INTO lesson_types VALUES (7, 1);
 
 -- Use case 5
-INSERT INTO visit (member_id, center_id, date) VALUES
+INSERT OR IGNORE INTO visit (member_id, center_id, date) VALUES
 ('11', '1', '2026-01-01'),
 ('11', '1', '2026-01-03'),
 ('11', '1', '2026-01-05'),
 ('11', '1', '2026-01-07'),
 ('11', '1', '2026-01-09');
 
-INSERT INTO group_lesson_participates (member_id, group_lesson_id, date) VALUES
+INSERT OR IGNORE INTO group_lesson_participates (member_id, group_lesson_id, date) VALUES
 ('11', '1', '2025-03-16'),
 ('11', '6', '2025-03-17'),
 ('11', '9', '2025-03-18');
