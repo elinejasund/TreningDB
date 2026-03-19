@@ -1,12 +1,5 @@
-DELETE FROM penalties
-WHERE member_id = (
-    SELECT id 
-    FROM member 
-    WHERE mail = 'johnny@stud.ntnu.no'
-);
-
-INSERT INTO penalties (member_id, date) VALUES
-((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('2026-02-20 16:30')),
+INSERT OR IGNORE INTO penalties (member_id, date) VALUES
+((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('2026-02-27 16:30')),
 ((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('2026-03-07 16:30')),
 ((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('2026-03-15 16:30'));
 
