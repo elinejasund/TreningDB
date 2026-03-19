@@ -15,10 +15,10 @@ class Weekday(Enum):
 def getWeeklySchedule(start_day: int | str, week: int):
     weekday = Weekday(start_day) if isinstance(start_day, int) else Weekday[start_day.upper()]
 
-    start_date = date.fromisocalendar(2025, week, weekday.value)  # (year, week, day of week)
+    start_date = date.fromisocalendar(2026, week, weekday.value)  # (year, week, day of week)
     start_datetime = datetime(start_date.year, start_date.month, start_date.day)
 
-    end_date = date.fromisocalendar(2025, week + 1, Weekday.MONDAY.value)
+    end_date = date.fromisocalendar(2026, week + 1, Weekday.MONDAY.value)
     end_datetime = datetime(end_date.year, end_date.month, end_date.day)
 
     # Assumes that group lesson is the table of interest
@@ -38,6 +38,6 @@ def getWeeklySchedule(start_day: int | str, week: int):
         for row in rows:
             print(row[0])
 
-# Assumes that the task asks for the schedule of the 12th week of 2025, starting on the input day
+# Assumes that the task asks for the schedule of the 12th week of 2026, starting on the input day
 
 getWeeklySchedule("monday", 12)

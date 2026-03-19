@@ -74,5 +74,5 @@ def book_group_lesson(member: str, lesson_id: int, capacity: int):
 
         print("Booking successful")
 
-lesson_id, capacity = find_group_lesson("Spin60", "2025-03-17 18:30", "Øya treningssenter")
+lesson_id, capacity = find_group_lesson("Spin60", "2026-03-17 18:30", "Øya treningssenter")
 book_group_lesson("johnny@stud.ntnu.no", lesson_id, capacity)

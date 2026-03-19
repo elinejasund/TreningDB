@@ -1,13 +1,4 @@
-WITH attendance_plan(mail, lesson_time) AS (
-    VALUES
-		('johnny@stud.ntnu.no', '2025-03-16 07:00'),
-        ('johnny@stud.ntnu.no', '2025-03-16 16:30'),
-        ('gina.giske@ntnu.no', '2025-03-16 16:30'),
-        ('gina.giske@ntnu.no', '2025-03-16 17:40'),
-        ('catrin-johansen@ntnu.no', '2025-03-17 18:30')
-),
-
-member_ids AS (
+WITH member_ids AS (
     SELECT id, mail FROM member
 ),
 
@@ -24,7 +15,7 @@ JOIN lesson_ids l ON l.time LIKE t.lesson_time || '%';
 WITH attendance AS (
     SELECT member_id, COUNT(*) AS total_attendances
     FROM group_lesson_participates
-    WHERE date LIKE '2025-03%'
+    WHERE date LIKE '2026-03%'
     GROUP BY member_id
 ),
 max_attendance AS (

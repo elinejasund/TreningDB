@@ -66,5 +66,5 @@ def registration_group_lesson(member: str, lesson: int):
 
         print("Registration successful")
 
-lesson = find_group_lesson("Spin60", "2025-03-17 18:30", "Øya treningssenter");
+lesson = find_group_lesson("Spin60", "2026-03-17 18:30", "Øya treningssenter");
 registration_group_lesson("johnny@stud.ntnu.no", lesson);

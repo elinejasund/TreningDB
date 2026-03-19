@@ -11,7 +11,7 @@ lesson AS (
     JOIN room ON group_lesson.room_id = room.id
     JOIN center ON room.center_id = center.id
     JOIN lesson_types ON group_lesson.id = lesson_types.lesson_id
-    WHERE group_lesson.time = '2025-03-17 18:30' 
+    WHERE group_lesson.time = '2026-03-17 18:30' 
       AND center.name = 'Øya treningssenter' 
       AND lesson_types.activity_type_id = (SELECT activity_id FROM activity)
 )
