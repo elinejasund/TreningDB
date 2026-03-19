@@ -8,7 +8,7 @@ def find_group_lesson(activity: str, time: str, center: str):
         cursor.execute("SELECT id FROM activity_type WHERE name = ?", (activity,))
         activity_row = cursor.fetchone()
         if not activity_row:
-            print("Activity not found")
+            print("Treningstype ikke funnet.")
             return
         activity_id = activity_row[0]
 
@@ -16,7 +16,7 @@ def find_group_lesson(activity: str, time: str, center: str):
         cursor.execute("SELECT id FROM center WHERE name = ?", (center,))
         center_row = cursor.fetchone()
         if not center_row:
-            print("Center not found")
+            print("Senter ikke funnet.")
             return
         center_id = center_row[0]
 
@@ -32,7 +32,7 @@ def find_group_lesson(activity: str, time: str, center: str):
 
         lesson_row = cursor.fetchone()
         if not lesson_row:
-            print("Lesson not found")
+            print("Gruppetime ikke funnet.")
             return None
         lesson_id, capacity = lesson_row
 
@@ -46,25 +46,25 @@ def registration_group_lesson(member: str, lesson: int):
         cursor.execute("SELECT id FROM member WHERE mail = ?", (member,))
         member_row = cursor.fetchone()
         if not member_row:
-            print("User not found")
+            print("Bruker ikke funnet.")
             return
         member_id = member_row[0]
 
         if not lesson:
-            print("Lesson not found")
+            print("Gruppetime ikke funnet. ")
             return None
 
         # Check if already registered
         cursor.execute("SELECT COUNT(*) FROM group_lesson_participates WHERE member_id = ? AND group_lesson_id = ?", (member_id, lesson))
         if cursor.fetchone()[0] > 0:
-            print("Already registered")
+            print("Du er allerede registrert oppmøte på denne gruppetimen.")
             return
 
         # Insert registration
         cursor.execute("INSERT INTO group_lesson_participates (member_id, group_lesson_id, date) VALUES (?, ?, datetime('now'))", (member_id, lesson))
         con.commit()
 
-        print("Registration successful")
+        print("Du har nå registrert oppmøte til gruppetimen!")
 
 lesson = find_group_lesson("Spin60", "2026-03-17 18:30", "Øya treningssenter");
 registration_group_lesson("johnny@stud.ntnu.no", lesson);

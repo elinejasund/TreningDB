@@ -36,7 +36,7 @@ if is_blacklisted(member_id):
     print("Sign-up denied: user is blacklisted.")
 else:
     cursor.execute("""
-        INSERT OR IGNORE INTO group_lesson_booking (member_id, group_lesson_id, time_booked)
+        INSERT INTO group_lesson_booking (member_id, group_lesson_id, time_booked)
         VALUES (?, ?, datetime('now'))
     """, (member_id, lesson_id))
     print("Sign-up successful!")

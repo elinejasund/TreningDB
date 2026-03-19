@@ -26,8 +26,10 @@ def getWeeklySchedule(start_day: int | str, week: int):
     with sqlite3.connect("DB2.db") as con:
         cur = con.cursor()
         query = """
-        SELECT time
+        SELECT name, time
         FROM group_lesson
+        JOIN lesson_types ON group_lesson.id = lesson_types.lesson_id
+        JOIN activity_type on lesson_types.activity_type_id = activity_type_id
         WHERE time BETWEEN ? AND ?
         ORDER BY time
         """
@@ -36,7 +38,7 @@ def getWeeklySchedule(start_day: int | str, week: int):
         # To get a prettier output:
         rows = cur.fetchall()
         for row in rows:
-            print(row[0])
+            print("Gruppetime: "+row[0] + "       " + "Tid: " + row[1])
 
 # Assumes that the task asks for the schedule of the 12th week of 2026, starting on the input day
 
