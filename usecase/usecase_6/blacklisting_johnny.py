@@ -4,12 +4,6 @@ import os
 con = sqlite3.connect('DB2.db')
 cursor = con.cursor()
 
-base = os.path.dirname(os.path.abspath(__file__))
-sql_path = os.path.join(base, "blacklisting_johnny.sql")
-
-with open(sql_path, "r") as f:
-    cursor.executescript(f.read())
-
 def is_blacklisted(member_id):
     cursor.execute("""
         SELECT COUNT(*)
@@ -43,7 +37,7 @@ if is_blacklisted(member_id):
     print("Sign-up denied: user is blacklisted.")
 else:
     cursor.execute("""
-        INSERT INTO group_lesson_signups (member_id, lesson_id, signup_time)
+        INSERT OR IGNORE INTO group_lesson_booking (member_id, group_lesson_id, time_booked)
         VALUES (?, ?, datetime('now'))
     """, (member_id, lesson_id))
     print("Sign-up successful!")

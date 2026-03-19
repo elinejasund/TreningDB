@@ -6,13 +6,6 @@ import os
 con = sqlite3.connect('DB2.db')
 cursor = con.cursor()
 
-base = os.path.dirname(os.path.abspath(__file__))
-sql_path = os.path.join(base, "attender.sql")
-
-# Run the SQL file (this performs the INSERTs)
-with open(sql_path, "r") as f:
-    cursor.executescript(f.read())
-
 con.commit()
 
 if len(sys.argv) > 1:
