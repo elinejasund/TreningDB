@@ -1,15 +1,3 @@
--- Johnny og Gina work out together 3 times
--- Commented out as it is already inserted in the database
-INSERT INTO visit VALUES
-(11, 1, '2026-02-01 10:00:00'),
-(2,  1, '2026-02-01 10:00:40'),
-
-(11, 1, '2026-02-10 11:15:00'),
-(2,  1, '2026-02-10 11:15:50'),
-
-(11, 1, '2026-03-05 09:30:10'),
-(2,  1, '2026-03-05 09:30:50');
-
 -- Select to check training in pairs the last 3 months
 SELECT 
     m1.mail AS student1,
