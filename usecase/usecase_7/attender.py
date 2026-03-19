@@ -1,7 +1,5 @@
 import sqlite3
 import sys
-from pathlib import Path
-import os
 
 con = sqlite3.connect('DB2.db')
 cursor = con.cursor()
