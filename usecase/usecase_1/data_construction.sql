@@ -16,7 +16,6 @@ INSERT INTO room VALUES
 (4, 1, "gruppetreningssal", 15),
 (5, 4, "spinningssal", 20);
 
-
 -- Sykler
 INSERT INTO bike VALUES
 (1, 1, "Titan Life Indoor Bike S72", 0),
@@ -80,7 +79,7 @@ INSERT INTO bike VALUES
 (58, 5, "ICG IC7", 1);
 
 -- Brukere
-INSERT INTO Member VALUES
+INSERT INTO member VALUES
 (2, "Gina Giske", "gina.giske@ntnu.no", "22334455"),
 (3, "Catrin Johansen", "catrin-johansen@ntnu.no", "33445566"),
 (4, "Tobi Haugrønning", "tbh@ntnu.no", "44556677"),
@@ -131,3 +130,16 @@ INSERT INTO facility (center_id, type) VALUES
 --Usecase 2
 INSERT INTO activity_type VALUES (1, "Spin60", "En variert spinningtime som er noe mer utfordrende enn Spin45 med lengre varighet og tidvis høyere tempo. Du styrer likevel intensiteten selv, og timen passer alle som liker å tråkke i takt! Timen inneholder 2-4 arbeidsperioder med variert løype.");
 INSERT INTO lesson_types VALUES (7, 1);
+
+-- Use case 5
+INSERT INTO visit (member_id, center_id, date) VALUES
+('11', '1', '2026-01-01'),
+('11', '1', '2026-01-03'),
+('11', '1', '2026-01-05'),
+('11', '1', '2026-01-07'),
+('11', '1', '2026-01-09');
+
+INSERT INTO group_lesson_participates (member_id, group_lesson_id, date) VALUES
+('11', '1', '2025-03-16'),
+('11', '6', '2025-03-17'),
+('11', '9', '2025-03-18');
