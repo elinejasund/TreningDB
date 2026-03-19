@@ -17,4 +17,3 @@ with sqlite3.connect("DB2.db") as con:
     for row in rows:
         print(row)
 
-# Får ikke til å sette inn/lese data via data_construction.sql?
