@@ -1,16 +1,17 @@
 import sqlite3
+import sys
 
-con = sqlite3.connect('../DB2.db')
+con = sqlite3.connect('DB2.db')
 cursor = con.cursor()
-
-# Run the SQL file (this performs the INSERTs)
-with open("attender.sql", "r") as f:
-    cursor.executescript(f.read())
 
 con.commit()
 
-# Parameter month
-month = "2026-03"
+if len(sys.argv) > 1:
+    month = sys.argv[1]
+else:
+    month = input("Enter year and month (YYYY-MM): ").strip()
+    if not month:
+        raise SystemExit("Month is required.")
 
 cursor.execute("""
     WITH attendance AS (
