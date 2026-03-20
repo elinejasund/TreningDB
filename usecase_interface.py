@@ -154,7 +154,7 @@ def usecase_7():
 
 def usecase_8():
     print('Usecase 8: Analyse på felles treningsøkter og personer som trener sammen.')
-    if prompt_yes_no('Ønsker du å kjøre joint training pair analysis SQL nå?'):
+    if prompt_yes_no('Ønsker du å kjøre analyse av treningsøkter i par via SQL nå?'):
         run_python_file(USECASES['8'])
     else:
        return
