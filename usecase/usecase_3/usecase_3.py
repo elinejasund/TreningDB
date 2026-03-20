@@ -54,6 +54,12 @@ def registration_group_lesson(member: str, lesson: int):
             print("Gruppetime ikke funnet. ")
             return None
 
+        # Check if booked for lesson
+        cursor.execute("SELECT COUNT(*) FROM group_lesson_booking WHERE member_id = ? AND group_lesson_id = ?", (member_id, lesson))
+        if cursor.fetchone()[0] != 1:
+            print("Du har ikke meldt deg opp til denne timen!")
+            return
+
         # Check if already registered
         cursor.execute("SELECT COUNT(*) FROM group_lesson_participates WHERE member_id = ? AND group_lesson_id = ?", (member_id, lesson))
         if cursor.fetchone()[0] > 0:
