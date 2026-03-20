@@ -5,13 +5,13 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 USECASES = {
-    "1": "usecase/usecase_1/data_construction.sql",
-    "2": "usecase/usecase_2/book_spin60.py",
-    "3": "usecase/usecase_3/johnny_spin60_registration.py",
+    "1": "usecase/usecase_1/usecase_1.sql",
+    "2": "usecase/usecase_2/usecase_2.py",
+    "3": "usecase/usecase_3/usecase_3.py",
     "4": "usecase/usecase_4/usecase_4.py",
     "5": "usecase/usecase_5/usecase_5.py",
-    "6": "usecase/usecase_6/blacklisting_johnny.py",
-    "7": "usecase/usecase_7/attender.py",
+    "6": "usecase/usecase_6/usecase_6.py",
+    "7": "usecase/usecase_7/usecase_7.py",
     "8": "usecase/usecase_8/usecase_8.py",
 }
 
