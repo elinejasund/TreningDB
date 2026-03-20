@@ -75,17 +75,41 @@ Alle brukstilfellene krever at du bekrefter valget ditt, og noen ønsker at du s
 Dersom man har kjørt alle brukstilfellene eller ønsker å starte databasen på nytt, kan man kjøre brukstilfelle 0, som vil tilbakestille alle tabellene til å være tomme.
 
 ### Brukertilfelle 0
-Vi har valgt å legge til brukertilfelle 0 for å gi bruker en møte å laste inn de tomme tabellene i databasen. Dette er gjort separat i fra å legge inn dataen i databasen slik at bruker kan gjøre brukertilfelle 0 dersom de ønsker å tømme databasen fra data. 
+Vi har valgt å legge til brukertilfelle 0 for å gi bruker en mulighet til å laste inn de tomme tabellene i databasen. Dette er gjort separat ifra å legge inn dataen i databasen slik at bruker kan gjøre brukertilfelle 0 dersom de ønsker å tømme databasen fra data. 
 
+![Resultat av output for brukertilfelle 0](images/usecase_0_result.png)
 
 ### Brukertilfelle 1
+
+![Resultat av output for brukertilfelle 1](images/usecase_1_result.png)
+
 ### Brukertilfelle 2
+
+![Resultat av output for brukertilfelle 2](images/usecase_2_result.png)
+
 ### Brukertilfelle 3
+
+![Resultat av output for brukertilfelle 3](images/usecase_3_result.png)
+
 ### Brukertilfelle 4
+
+![Resultat av output for brukertilfelle 4](images/usecase_4_result.png)
+
 ### Brukertilfelle 5
+
+![Resultat av output for brukertilfelle 5](images/usecase_5_result.png)
+
 ### Brukertilfelle 6
+
+![Resultat av output for brukertilfelle 6](images/usecase_6_result.png)
+
 ### Brukertilfelle 7
+
+![Resultat av output for brukertilfelle 7](images/usecase_7_result.png)
+
 ### Brukertilfelle 8
+
+![Resultat av output for brukertilfelle 8](images/usecase_8_result.png)
 
 ## Merknadder til implementasjon av databasen
 * Det er ikke implementert en sjekk av dato og tid for booking eller registrering av en gruppetime før den implementeres. Dette ble aktuvt utelatt da det er usikkert når bruker skal utføre brukertilfellene, og vi ønsket ikke at feilmeldinger skulle oppstå dersom de prøver å melde seg på en time før eller etter fristen.
