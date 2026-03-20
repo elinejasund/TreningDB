@@ -29,7 +29,7 @@ def getWeeklySchedule(start_day: int | str, week: int):
         SELECT name, time
         FROM group_lesson
         JOIN lesson_types ON group_lesson.id = lesson_types.lesson_id
-        JOIN activity_type on lesson_types.activity_type_id = activity_type_id
+        JOIN activity_type ON lesson_types.activity_type_id = activity_type.id
         WHERE time BETWEEN ? AND ?
         ORDER BY time
         """

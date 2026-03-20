@@ -15,6 +15,6 @@ lesson AS (
       AND center.name = 'Øya treningssenter' 
       AND lesson_types.activity_type_id = (SELECT activity_id FROM activity)
 )
-INSERT INTO group_lesson_participates (member_id, group_lesson_id, date)
+INSERT OR IGNORE INTO group_lesson_participates (member_id, group_lesson_id, date)
 SELECT member_id, lesson_id, datetime('now')
 FROM selectedMember, lesson;
