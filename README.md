@@ -182,10 +182,7 @@ Kode som er totalt KI-generert er merket med kommentar *AI GEN*. For å se hvor 
 
 Ut over dette er KI brukt til å hjelpe med å lage interface, men mye av denne koden ble endret i løpet av prosjektet.
 
-I brukstilfelle 2 og 3 ble KI brukt til å generere hardkodede verdier, men senere skulle disse være interaktive. Her ble KI-verktøy brukt til å stedene i koden der de hardkodede verdiene var. Endringen ble gjort manuelt av gruppemedlemmer, og hentingen av verdiene ble også gjort av gruppemedlemmer.
-
-<!-- 
-- usecase 2 og 3, skrev først hardkodede verdier, men ønsker senere å ha en interaktiv versjon, brukte da Chat til å finne stedene i koden der vi refererte til Johnny og heller gi den en ukjent variabel, men måtte selv endre hvilke verdier de variablene skulle referere til -->
+I brukstilfelle 2 og 3 hadde vi originalt hardkodede verdier, men senere skulle disse være interaktive. Her ble KI-verktøy brukt til å finne de stedene i koden der de hardkodede verdiene var. Deretter ble endringene gjort manuelt av gruppemedlemmer, og hentingen av verdiene ble også gjort av gruppemedlemmer.
 
 ## Gruppeinformasjon
 Gruppenummer: 134
