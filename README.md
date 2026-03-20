@@ -91,8 +91,7 @@ Alle brukstilfellene krever at du bekrefter valget ditt, og noen ønsker at du s
 
 Dersom man har kjørt alle brukstilfellene eller ønsker å starte databasen på nytt, kan man kjøre brukstilfelle 0, som vil tilbakestille alle tabellene til å være tomme.
 
-### Brukertilfelle 0
-Vi har valgt å legge til brukertilfelle 0 for å gi bruker en mulighet til å laste inn de tomme tabellene i databasen. Dette er gjort separat ifra å legge inn dataen i databasen slik at bruker kan gjøre brukertilfelle 0 dersom de ønsker å tømme databasen fra data. 
+### Brukertilfelle 0 
 Vi har valgt å legge til brukertilfelle 0 for å gi bruker en mulighet til å laste inn de tomme tabellene i databasen. Dette er gjort separat ifra å legge inn dataen i databasen slik at bruker kan gjøre brukertilfelle 0 dersom de ønsker å tømme databasen fra data. 
 
 ![Resultat av output for brukertilfelle 0](images/usecase_0_result.png)
