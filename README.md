@@ -66,6 +66,12 @@ DB2/
 Alle brukstilfeller er implementert i SQL, med Python-filer i tilegg der oppgaven krever det eller for å enkelt lese og kjøre SQL-filene.
 
 ## Hvordan kjøre database applikasjonen
+### Installasjons krav
+
+- Python 3.8 eller nyere
+
+- Ingen eksterne biblioteker kreves (kun standardbiblioteket sqlite3)
+
 Database applikasjon er tekstbasert og utføres i terminalen dersom man kjører *usecase_interface.py*. Brukeren presenteres med en meny med ulike valg som støtter de implementerte brukstilfellene.
 
 Database filen lagt ved i dette prosjektet er tom og for å bygge opp databasen må man utføre alle valgenen i menyen. Menyen består av valg fra 0-8, for at applikasjonen skal kjøre uten feil anbefales det å kjøre valgene i stigende rekkefølge.
@@ -112,7 +118,7 @@ Vi har valgt å legge til brukertilfelle 0 for å gi bruker en mulighet til å l
 ![Resultat av output for brukertilfelle 8](images/usecase_8_result.png)
 
 ## Merknadder til implementasjon av databasen
-* Det er ikke implementert en sjekk av dato og tid for booking eller registrering av en gruppetime før den implementeres. Dette ble aktuvt utelatt da det er usikkert når bruker skal utføre brukertilfellene, og vi ønsket ikke at feilmeldinger skulle oppstå dersom de prøver å melde seg på en time før eller etter fristen.
+* Det er ikke implementert kontroll av dato og tidspunkt for booking eller registrering av oppmøte før operasjonene utføres. Dette er et bevisst valg, ettersom det er usikkert når brukeren vil kjøre brukstilfellene og vi bruker nåværende dato for disse tilfellene. Vi ønsket å unngå feilmeldinger dersom det forsøkes å melde seg på eller registrere oppmøte utenfor de definerte tidsfristene. Dersom vi kunne forutsatt at brukeren kun interagerer med systemet innenfor gyldige tidsrom, ville slike kontroller blitt implementert i Python filene, på samme måte som andre ugyldige tilfeller håndteres.
 * Dersom brukertilfelle spesifiserte at handlingen skulle håndtere et tilfelle for Johnny har vi valgt at tekstapplikasjonen kun skal utføre dette for Johnny, selv om fler av python filene tillater å utføre handlingen for ulike brukere. Dette er gjort slik at det er lett for brukere å utføre handlingen uten å måtte skrive inn informasjon angående gruppetimer eller brukere. 
 
 ## Endringer gjort i skjema fra første innlevering
