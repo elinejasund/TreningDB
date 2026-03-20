@@ -1,9 +1,20 @@
-# DB2 Gruppe 134
+# TreningDB Gruppe 134
 Dette prosjektet inneholder Python og SQL filer for å konstruere og bruke en DB Browser for SQLite i forbindelse med prosjektet for TDT4145 Datamodellering og databasesystemer. Prosjektet modellerer en database for SiT Trening i Trondheim og har implementert kode for å fullføre flere ulike brukertilfeller.
 
 ## Filstruktur
 ```text
-DB2/
+TreningDB/
+├── images/
+│   ├── usecase_0_result.png
+│   ├── usecase_1_result.png
+│   ├── usecase_2_result.png
+│   ├── usecase_3_result.png
+│   ├── usecase_4_result.png
+│   ├── usecase_5_result.png
+│   ├── usecase_6_result.png
+│   ├── usecase_7_result.png
+│   └── usecase_8_result.png
+|
 ├── table_construction/
 │   ├── table_construction.py
 │   └── table_construction.sql
@@ -40,7 +51,7 @@ DB2/
 │       └── usecase_8.sql
 │
 ├── .gitignore
-├── DB2.db
+├── TreningDB.db
 ├── README.md
 └── usecase_interface.py
 ```
