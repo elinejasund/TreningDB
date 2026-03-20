@@ -82,4 +82,4 @@ Dersom man har kjørt alle brukstilfellene eller ønsker å starte databasen på
 
 ## Gruppeinformasjon
 Gruppenummer: 134
-Gruppemedlememr: Eline Jåsund, Gina Giske, Catrin Johansen 
+Gruppemedlemmer: Eline Jåsund, Gina Giske, Catrin Johansen 
