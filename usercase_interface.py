@@ -131,8 +131,8 @@ def usecase_6():
     print('Usecase 6: Svarteliste logikk for brukere med 3 prikker i 30 dager.')
     user = "johnny@stud.ntnu.no"
     if prompt_yes_no(f"Vil du svarteliste brukeren {user} nå?"):
-        print(f"{user} har blitt svartelistet fra elektronisk booking for 30 dager (simulert).")
-        if prompt_yes_no('Ønsker du å teste svarteliste ved å prøve en booking (usecase 2)?'):
+        print(f"{user} har blitt svartelistet fra elektronisk booking for 30 dager.")
+        if prompt_yes_no('Ønsker du å teste svartelisten ved å prøve en booking?'):
             usecase_2()
     else:
         return
@@ -140,8 +140,8 @@ def usecase_6():
 
 def usecase_7():
     print('Usecase 7: Finn personen som har deltatt i flest felles treningsøkter i en måned.')
-    month = input('Month [2026-03]: ').strip() or '2026-03'
-    print(f"Finding top joint training attendees in month {month}.")
+    month = input('Måned [2026-03]: ').strip() or '2026-03'
+    print(f"Finn personen som har deltatt i flest felles treningsøkter i måned {month}.")
     run_python_file(USECASES['7'])
 
 
