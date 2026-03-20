@@ -30,8 +30,8 @@ else:
     print("Brukeren er ikke svartelistet.")
 
 # Check to attempt joining group lesson and see if
-# blacklist status is accounted for. Assuming lesson_id = 1 to test.
-lesson_id = 1
+# blacklist status is accounted for. Assuming lesson_id = 2 to test.
+lesson_id = 2
 if is_blacklisted(member_id):
     print("Påmelding nektet: bruker er svartelistet.")
 else:

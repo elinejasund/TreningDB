@@ -49,7 +49,6 @@ def run_sql_file(path):
     try:
         cur.executescript(sql)
         con.commit()
-        print("SQL ble kjørt uten feil.")
     except sqlite3.Error as e:
         print("SQL kjørefeil:", e)
     finally:
@@ -137,12 +136,15 @@ def usecase_5():
 def usecase_6():
     print('Usecase 6: Svarteliste logikk for brukere med 3 prikker i 30 dager.')
     user = "johnny@stud.ntnu.no"
+
     if prompt_yes_no(f"Vil du svarteliste brukeren {user} nå?"):
+        run_sql_file('usecase/usecase_6/usecase_6.sql')
         print(f"{user} har blitt svartelistet fra elektronisk booking for 30 dager.")
         if prompt_yes_no('Ønsker du å teste svartelisten ved å prøve en booking?'):
-            usecase_2()
+            run_python_file(USECASES['6'])
     else:
         return
+
 
 
 def usecase_7():

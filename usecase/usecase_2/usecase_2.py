@@ -50,6 +50,17 @@ def book_group_lesson(member: str, lesson_id: int, capacity: int):
             return
         member_id = member_row[0]
 
+        cursor.execute("""
+            SELECT COUNT(*)
+            FROM penalties
+            WHERE member_id = ?
+              AND date >= datetime('now', '-30 days')
+        """, (member_id,))
+        penalty_count = cursor.fetchone()[0]
+        if penalty_count >= 3:
+            print("Påmelding nektet: bruker er svartelistet.")
+            return
+
         if not lesson_id:
             print("Gruppetime ikke funnet.")
             return
@@ -72,7 +83,7 @@ def book_group_lesson(member: str, lesson_id: int, capacity: int):
         cursor.execute("INSERT INTO group_lesson_booking (member_id, group_lesson_id, time_booked) VALUES (?, ?, datetime('now'))", (member_id, lesson_id))
         con.commit()
 
-        print("Du har booket nå gruppetimen!")
+        print("Du har nå booket gruppetimen!")
 
 lesson_id, capacity = find_group_lesson("Spin60", "2026-03-17 18:30", "Øya treningssenter")
 book_group_lesson("johnny@stud.ntnu.no", lesson_id, capacity)
