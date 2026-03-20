@@ -179,12 +179,12 @@ INSERT OR IGNORE INTO activity_type (id, name, description) VALUES
 (4, "Spin4x4", "En forutsigbar intervalltime: 4 stående intervaller på 4 minutter hver, med ca 2 minutter aktiv pause mellom hvert drag. God oppvarming og nedsykling inkludert.");
 
 INSERT OR IGNORE INTO group_lesson_booking (member_id, group_lesson_id, time_booked) VALUES
-(11, 1, '2026-03-16 07:00:00'),
-(11, 6, '2026-03-17 07:00:00'),
-(11, 9, '2026-03-18 16:15:00'),
-(2, 1, '2026-03-16 07:00:00'),
-(2, 6, '2026-03-17 07:00:00'),
-(2, 9, '2026-03-18 16:15:00');
+(11, 1, '2026-03-14 07:00:00'),
+(11, 6, '2026-03-15 07:00:00'),
+(11, 9, '2026-03-16 16:15:00'),
+(2, 1, '2026-03-14 07:00:00'),
+(2, 6, '2026-03-15 07:00:00'),
+(2, 9, '2026-03-16 16:15:00');
 
 -- Use case 5
 INSERT OR IGNORE INTO group_lesson_participates (member_id, group_lesson_id, date) VALUES
