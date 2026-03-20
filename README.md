@@ -140,5 +140,3 @@ Vi har valgt å legge til brukertilfelle 0 for å gi bruker en mulighet til å l
 ## Gruppeinformasjon
 Gruppenummer: 134
 Gruppemedlemmer: Eline Jåsund, Gina Giske, Catrin Johansen 
-
-Gruppemedlemmer: Eline Jåsund, Gina Giske, Catrin Johansen 
