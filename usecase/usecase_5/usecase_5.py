@@ -14,7 +14,11 @@ with sqlite3.connect("DB2.db") as con:
     """
     
     cur.execute(query)
+
     rows = cur.fetchall()
+    print("aktivitet navn | dato")
+    print("----------------------")
+
     for row in rows:
         print("Member: " + row[0] + "       " + "Lesson: " + row[1] + "       " + "Time: " + row[2])
 
