@@ -15,10 +15,10 @@ class Weekday(Enum):
 def getWeeklySchedule(start_day: int | str, week: int):
     weekday = Weekday(start_day) if isinstance(start_day, int) else Weekday[start_day.upper()]
 
-    start_date = date.fromisocalendar(2025, week, weekday.value)  # (year, week, day of week)
+    start_date = date.fromisocalendar(2026, week, weekday.value)  # (year, week, day of week)
     start_datetime = datetime(start_date.year, start_date.month, start_date.day)
 
-    end_date = date.fromisocalendar(2025, week + 1, Weekday.MONDAY.value)
+    end_date = date.fromisocalendar(2026, week + 1, Weekday.MONDAY.value)
     end_datetime = datetime(end_date.year, end_date.month, end_date.day)
 
     # Assumes that group lesson is the table of interest
@@ -26,8 +26,10 @@ def getWeeklySchedule(start_day: int | str, week: int):
     with sqlite3.connect("DB2.db") as con:
         cur = con.cursor()
         query = """
-        SELECT time
+        SELECT name, time
         FROM group_lesson
+        JOIN lesson_types ON group_lesson.id = lesson_types.lesson_id
+        JOIN activity_type ON lesson_types.activity_type_id = activity_type.id
         WHERE time BETWEEN ? AND ?
         ORDER BY time
         """
@@ -36,8 +38,8 @@ def getWeeklySchedule(start_day: int | str, week: int):
         # To get a prettier output:
         rows = cur.fetchall()
         for row in rows:
-            print(row[0])
+            print("Gruppetime: "+row[0] + "       " + "Tid: " + row[1])
 
-# Assumes that the task asks for the schedule of the 12th week of 2025, starting on the input day
+# Assumes that the task asks for the schedule of the 12th week of 2026, starting on the input day
 
 getWeeklySchedule("monday", 12)
