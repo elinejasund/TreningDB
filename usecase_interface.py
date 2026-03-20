@@ -5,7 +5,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 USECASES = {
-    "1": "usecase/usecase_1/usecase_1.sql",
+    "1": "usecase/usecase_1/usecase_1.py",
     "2": "usecase/usecase_2/usecase_2.py",
     "3": "usecase/usecase_3/usecase_3.py",
     "4": "usecase/usecase_4/usecase_4.py",
@@ -74,9 +74,9 @@ def run_python_file(path, args=None):
 
 
 def usecase_1():
-    print("Usecase 1: Sett in basedata (treningssenter, saler, sykler, brukere, trenere, treninger) via SQL.")
-    if prompt_yes_no("Ønsker du å kjøre den initiale SQL data inserten?"):
-        run_sql_file(USECASES['1'])
+    print("Usecase 1: Sett inn basedata (treningssenter, saler, sykler, brukere, trenere, treninger) via SQL.")
+    if prompt_yes_no("Ønsker du å kjøre SQL for å sette inn data i databasen?"):
+        run_python_file(USECASES['1'])
     else:
         return
 
@@ -98,7 +98,7 @@ def usecase_3():
     user = 'johnny@stud.ntnu.no'
     training = 'Spin60 tirsdag 17. mars kl.18:30'
 
-    if not prompt_yes_no(f'Ønsker du å registrere oppmøte for {training} for brukeren {user}?'):
+    if prompt_yes_no(f'Ønsker du å registrere oppmøte for {training} for brukeren {user}?'):
         run_python_file(USECASES['3'])
     else:
         return
