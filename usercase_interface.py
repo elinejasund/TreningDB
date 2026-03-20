@@ -82,13 +82,12 @@ def usecase_1():
 
 
 def usecase_2():
-    print('Usecase 2: Spin60 booking for bruker johnny@stud.ntnu.no på Øya treningssenter.')
-    user = input('Brukernavn [johnny@stud.ntnu.no]: ').strip() or 'johnny@stud.ntnu.no'
-    activity = input('Aktivitet [Spin60]: ').strip() or 'Spin60'
-    time = input('Tid [2026-03-17 18:30]: ').strip() or '2026-03-17 18:30'
-    print(f"Forberedte booking parametre: user={user}, activity={activity}, time={time}")
+    print('Usecase 2: Booking på Øya treningssenter.')
+    user = 'johnny@stud.ntnu.no'
+    activity = 'Spin60'
+    time = 'tirsdag 17. mars kl.18:30'
 
-    if prompt_yes_no('Ønsker du å booke denne treningen nå?'):
+    if not prompt_yes_no(f'Ønsker du å booke {activity} time {time} for brukeren {user}?'):
         run_python_file(USECASES['2'])
     else:
         return
@@ -96,11 +95,10 @@ def usecase_2():
 
 def usecase_3():
     print('Usecase 3: Registrer oppmøte for treningsøkten.')
-    user = input('Brukernavn [johnny@stud.ntnu.no]: ').strip() or 'johnny@stud.ntnu.no'
-    training = input('Trening referanse [Spin60 Tuesday 17 March 18:30]: ').strip() or 'Spin60 Tuesday 17 March 18:30'
-    print(f"Forberedte oppmøte parametre: user={user}, training={training}")
+    user = 'johnny@stud.ntnu.no'
+    training = 'Spin60 tirsdag 17. mars kl.18:30'
 
-    if prompt_yes_no('Ønsker du å registrere oppmøte nå?'):
+    if not prompt_yes_no(f'Ønsker du å registrere oppmøte for {training} for brukeren {user}?'):
         run_python_file(USECASES['3'])
     else:
         return
@@ -108,11 +106,11 @@ def usecase_3():
 
 def usecase_4():
     print('Usecase 4: Ukentlig timeplan query for datoperiode.')
-    start = input('Start dato [2026-03-16]: ').strip() or '2026-03-16'
-    week = input('Ukenummer [12]: ').strip() or '12'
-    print(f"Skal vise timeplan for uke={week} fra og med {start}")
+    start = '16. mars'
+    end = '23. mars'
+    week = '12'
 
-    if prompt_yes_no('Ønsker du å kjøre ukentlig timeplan nå?'):
+    if prompt_yes_no(f"Ønsker du å vise den ukentlige timeplanen for uke={week}, fra {start} til {end}"):
         run_python_file(USECASES['4'])
     else:
         return
