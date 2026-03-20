@@ -106,6 +106,7 @@ def usecase_3():
 
 def usecase_4():
     print('Usecase 4: Ukentlig timeplan for tidsintervall.')
+    print('Testdata er lagt inn for uke 12 frem til tirsdag, så det er best å teste med startdag mandag eller tirsdag i uke 12.')
     start_day = input("Startdag (f.eks. mandag): ").strip()
     week = input("Ukenummer (f.eks. 12): ").strip()
 
