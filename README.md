@@ -41,27 +41,27 @@ DB2/
 │
 ├── .gitignore
 ├── DB2.db
-└── README.md
+├── README.md
 └── usecase_interface.py
 ```
 
 ## Brukstilfeller implementert
 
-1. Opprette treningssenter, saler, utstyr, brukere, treninge og mer (Python + SQL).
+1. Opprette tabeller for treningssenter, saler, fasiliteter, brukere, gruppetimer og mer (Python + SQL).
 
-2. Booke trening for en spesifikk bruker (Python + SQL).
+2. Booke Spin60 for Johnny (Python + SQL).
 
-3. Registrere oppmøte for en trening (Python + SQL).
+3. Registrere oppmøte av Spin60 for Johnny (Python + SQL).
 
 4. Ukeplan for alle treninger i en gitt uke (Python + SQL).
 
-5. Personlig besøkshistorie for en bruker (SQL).
+5. Personlig besøkshistorie for Johnny (SQL).
 
-6. Svartelisting etter tre prikker innen 30 dager (Python + SQL).
+6. Svartelisting av Johnny etter å få tre prikker innen 30 dager (Python + SQL).
 
 7. Finne brukere med flest gruppetimer i en måned (Python + SQL).
 
-8. Finne to brukere som trener sammen flest ganger (SQL).
+8. Finne to brukere som trener sammen (SQL).
 
 Alle brukstilfeller er implementert i SQL, med Python-filer i tilegg der oppgaven krever det eller for å enkelt lese og kjøre SQL-filene.
 
@@ -74,12 +74,29 @@ Alle brukstilfellene krever at du bekrefter valget ditt, og noen ønsker at du s
 
 Dersom man har kjørt alle brukstilfellene eller ønsker å starte databasen på nytt, kan man kjøre brukstilfelle 0, som vil tilbakestille alle tabellene til å være tomme.
 
+### Brukertilfelle 0
+Vi har valgt å legge til brukertilfelle 0 for å gi bruker en møte å laste inn de tomme tabellene i databasen. Dette er gjort separat i fra å legge inn dataen i databasen slik at bruker kan gjøre brukertilfelle 0 dersom de ønsker å tømme databasen fra data. 
+
+
+### Brukertilfelle 1
+### Brukertilfelle 2
+### Brukertilfelle 3
+### Brukertilfelle 4
+### Brukertilfelle 5
+### Brukertilfelle 6
+### Brukertilfelle 7
+### Brukertilfelle 8
+
 ## Merknadder til implementasjon av databasen
 * Det er ikke implementert en sjekk av dato og tid for booking eller registrering av en gruppetime før den implementeres. Dette ble aktuvt utelatt da det er usikkert når bruker skal utføre brukertilfellene, og vi ønsket ikke at feilmeldinger skulle oppstå dersom de prøver å melde seg på en time før eller etter fristen.
 * Dersom brukertilfelle spesifiserte at handlingen skulle håndtere et tilfelle for Johnny har vi valgt at tekstapplikasjonen kun skal utføre dette for Johnny, selv om fler av python filene tillater å utføre handlingen for ulike brukere. Dette er gjort slik at det er lett for brukere å utføre handlingen uten å måtte skrive inn informasjon angående gruppetimer eller brukere. 
+
+## Endringer gjort i skjema fra første innlevering
+
 ## KI deklarasjon
 
 
 ## Gruppeinformasjon
 Gruppenummer: 134
+
 Gruppemedlemmer: Eline Jåsund, Gina Giske, Catrin Johansen 
