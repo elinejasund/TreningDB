@@ -87,7 +87,7 @@ def usecase_2():
     activity = 'Spin60'
     time = 'tirsdag 17. mars kl.18:30'
 
-    if not prompt_yes_no(f'Ønsker du å booke {activity} time {time} for brukeren {user}?'):
+    if prompt_yes_no(f'Ønsker du å booke {activity} time {time} for {user}?'):
         run_python_file(USECASES['2'])
     else:
         return
@@ -117,13 +117,11 @@ def usecase_4():
 
 
 def usecase_5():
-    print('Usecase 5: Bruker sin besøkshistorie query (unique rows).')
-    user = input('Brukernavn [johnny@stud.ntnu.no]: ').strip() or 'johnny@stud.ntnu.no'
-    since = input('Since dato [2026-01-01]: ').strip() or '2026-01-01'
-    print(f"Computing historie for {user} siden {since}")
+    print('Usecase 5: Johnny sin besøkshistorie (unike rader).')
+    print(f"Besøkshistorie for Johnny siden 1. januar 2026:")
 
     if prompt_yes_no('Ønsker du å kjøre brukeren sin besøkshistorie SQL nå?'):
-        run_sql_file(USECASES['5'])
+        run_python_file(USECASES['5'])
     else:
         return
 
@@ -158,15 +156,15 @@ def show_menu():
     print("""
 ===== Usecase Interface =====
 Choose a usecase (1-8) to run:
-1. Insert base data
+1. Sett inn grunnleggende data
 2. Spin60 booking
-3. Registration attendance
-4. Weekly schedule
-5. Johnny visit history
-6. Blacklisting
-7. Top session attendees
-8. Joint training pair analysis
-q. Quit
+3. Registrering av oppmøte
+4. Ukentlig timeplan
+5. Johnny sin besøkshistorie
+6. Svartelisting av Johnny
+7. Finn personen med flest felles treningsøkter i en måned
+8. Trening i par analyse
+q. Avslutt
 """)
 
 def main():
