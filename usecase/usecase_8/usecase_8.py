@@ -20,4 +20,4 @@ def execute_select(path):
 
     conn.close()
 
-execute_select("usecase/usecase_8/use_case_8.sql")
+execute_select("usecase/usecase_8/usecase_8.sql")
