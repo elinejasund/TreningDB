@@ -9,9 +9,9 @@ con.commit()
 if len(sys.argv) > 1:
     month = sys.argv[1]
 else:
-    month = input("Enter year and month (YYYY-MM): ").strip()
+    month = input("Skriv inn år og måned du ønsker å se resultat for (YYYY-MM): ").strip()
     if not month:
-        raise SystemExit("Month is required.")
+        raise SystemExit("Måned er påkrevd.")
 
 cursor.execute("""
     WITH attendance AS (
@@ -33,10 +33,10 @@ cursor.execute("""
 rows = cursor.fetchall()
 
 if not rows:
-    print("No group lessons were attended this month.")
+    print("Ingen gruppetimer ble deltatt på denne måneden.")
 else:
-    print(f"Members with most attendances in {month}:")
+    print(f"Medlemmer med mest deltagelser i {month}:")
     for name, mail, total_attendances in rows:
-        print(f"{name} ({mail}) - {total_attendances} attendances")
+        print(f"{name} ({mail}) - {total_attendances} deltagelser")
 
 con.close()

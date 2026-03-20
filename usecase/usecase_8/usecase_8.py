@@ -16,7 +16,7 @@ def execute_select(path):
 
     # Print results nicely
     for row in results:
-        print(f"Member1: {row[0]} Member2: {row[1]} Amount: {row[2]}")
+        print(f"Medlem 1: {row[0]} | Medlem 2: {row[1]} | Antall felles treninger: {row[2]}")
 
     conn.close()
 
