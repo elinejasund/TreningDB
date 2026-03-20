@@ -105,13 +105,12 @@ def usecase_3():
 
 
 def usecase_4():
-    print('Usecase 4: Ukentlig timeplan query for datoperiode.')
-    start = '16. mars'
-    end = '23. mars'
-    week = '12'
+    print('Usecase 4: Ukentlig timeplan for tidsintervall.')
+    start_day = input("Startdag (f.eks. mandag): ").strip()
+    week = input("Ukenummer (f.eks. 12): ").strip()
 
-    if prompt_yes_no(f"Ønsker du å vise den ukentlige timeplanen for uke={week}, fra {start} til {end}"):
-        run_python_file(USECASES['4'])
+    if prompt_yes_no(f"Ønsker du å vise den ukentlige timeplanen for uke {week}, fra {start_day} til søndag"):
+        run_python_file(USECASES['4'], args=[start_day, str(week)])
     else:
         return
 
