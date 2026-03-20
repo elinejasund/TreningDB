@@ -172,10 +172,23 @@ For å løse denne oppgaven valgte gruppen å sjekke hvilke to medlemmer som har
 * Dersom brukertilfelle spesifiserte at handlingen skulle håndtere et tilfelle for Johnny har vi valgt at tekstapplikasjonen kun skal utføre dette for Johnny, selv om fler av python filene tillater å utføre handlingen for ulike brukere. Dette er gjort slik at det er lett for brukere å utføre handlingen uten å måtte skrive inn informasjon angående gruppetimer eller brukere. 
 
 ## Endringer gjort i skjema fra første innlevering
-
+- La til time_booked i group_lesson_booking -> viste seg å være nødvendig, misforstod oppgaven
+- Ingen andre endringer
 
 ## KI deklarasjon
+Det er brukt KI-verktøy i prosjektet, vi har brukt ChatGPT og Copilot
 
+
+Må ha deklarasjon på alt som er generert av KI
+
+Brukt ChatGPT og Copilot
+
+Brukt til
+- interface
+- debugging -> gjort eventuelle endringer selv, bare brukt for å finne bug
+- hjelpe med å formatere strenger til query, særlig mtp datetime
+- usecase 2 og 3, skrev først hardkodede verdier, men ønsker senere å ha en interaktiv versjon, brukte da Chat til å finne stedene i koden der vi refererte til Johnny og heller gi den en ukjent variabel, men måtte selv endre hvilke verdier de variablene skulle referere til
+- fikk generert eksempeldata på sykler, fordi det er veldig mange av dem, og fasiliteter (basert på Sits nettside)
 
 ## Gruppeinformasjon
 Gruppenummer: 134
