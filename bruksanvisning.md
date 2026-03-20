@@ -68,6 +68,8 @@ Det er i denne perioden det er mest eksempeldata å basere spørringen på.
 ![Resultat av output for Brukstilfelle 7](images/usecase_7_result.png)
 
 ### Brukstilfelle 8
-Ved å kjøre brukstilfelle 8 får man vite 
+Ved å kjøre brukstilfelle 8 får man vite hvilke medlemmer som trener sammen, og hvor mange treninger de har vært på sammen.
+
+For å løse denne oppgaven valgte gruppen å sjekke hvilke to medlemmer som har ankommet senteret sammen (innenfor 1 minutt av hverandre) mer enn 3 ganger de siste 3 månedene.
 
 ![Resultat av output for Brukstilfelle 8](images/usecase_8_result.png)
