@@ -149,8 +149,7 @@ def usecase_6():
 
 def usecase_7():
     print('Usecase 7: Finn personen som har deltatt i flest felles treningsøkter i en måned.')
-    month = input('Måned [2026-03]: ').strip() or '2026-03'
-    print(f"Finn personen som har deltatt i flest felles treningsøkter i måned {month}.")
+    print(f"(eks. 2026-03)")
     run_python_file(USECASES['7'])
 
 
