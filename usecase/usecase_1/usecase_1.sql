@@ -18,6 +18,7 @@ INSERT OR IGNORE INTO room VALUES
 
 -- Sykler
 INSERT OR IGNORE INTO bike VALUES
+-- AI GEN:
 (1, 1, "Titan Life Indoor Bike S72", 0),
 (2, 1, "Titan Life Indoor Bike S72", 0),
 (3, 1, "Titan Life Indoor Bike S72", 0),
@@ -115,6 +116,7 @@ INSERT OR IGNORE INTO group_lesson (id, room_id, capacity, time, instructor) VAL
 
 -- Center facilities
 INSERT OR IGNORE INTO facility (center_id, type) VALUES
+-- AI GEN:
 (1, 'Gruppetrening'),
 (1, 'Egentrening'),
 (1, 'Utholdenhet'),

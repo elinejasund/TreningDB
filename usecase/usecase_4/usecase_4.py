@@ -47,6 +47,7 @@ def getWeeklySchedule(start_day: int | str, week: int):
         ORDER BY time
         """
         cur.execute(query, (
+        # AI GEN: (line 51-52)
         start_datetime.strftime("%Y-%m-%d %H:%M:%S"),
         end_datetime.strftime("%Y-%m-%d %H:%M:%S")))
 
