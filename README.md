@@ -176,19 +176,16 @@ For å løse denne oppgaven valgte gruppen å sjekke hvilke to medlemmer som har
 - Ingen andre endringer
 
 ## KI deklarasjon
-Det er brukt KI-verktøy i prosjektet, vi har brukt ChatGPT og Copilot
+Det er brukt KI-verktøy i prosjektet, vi har brukt ChatGPT og Copilot. 
 
+Kode som er totalt KI-generert er merket med kommentar *AI GEN*. For å se hvor i koden dette er, kan man søke på denne kommentaren. Dette gjelder innsetting av eksempeldata tilhørende spinningsykler og fasiliteter på treningssentere. Det er også generert kode for å formatere strenger til dato brukt i query tilhørende brukstilfelle 4.
 
-Må ha deklarasjon på alt som er generert av KI
+Ut over dette er KI brukt til å hjelpe med å lage interface, men mye av denne koden ble endret i løpet av prosjektet.
 
-Brukt ChatGPT og Copilot
+I brukstilfelle 2 og 3 ble KI brukt til å generere hardkodede verdier, men senere skulle disse være interaktive. Her ble KI-verktøy brukt til å stedene i koden der de hardkodede verdiene var. Endringen ble gjort manuelt av gruppemedlemmer, og hentingen av verdiene ble også gjort av gruppemedlemmer.
 
-Brukt til
-- interface
-- debugging -> gjort eventuelle endringer selv, bare brukt for å finne bug
-- hjelpe med å formatere strenger til query, særlig mtp datetime
-- usecase 2 og 3, skrev først hardkodede verdier, men ønsker senere å ha en interaktiv versjon, brukte da Chat til å finne stedene i koden der vi refererte til Johnny og heller gi den en ukjent variabel, men måtte selv endre hvilke verdier de variablene skulle referere til
-- fikk generert eksempeldata på sykler, fordi det er veldig mange av dem, og fasiliteter (basert på Sits nettside)
+<!-- 
+- usecase 2 og 3, skrev først hardkodede verdier, men ønsker senere å ha en interaktiv versjon, brukte da Chat til å finne stedene i koden der vi refererte til Johnny og heller gi den en ukjent variabel, men måtte selv endre hvilke verdier de variablene skulle referere til -->
 
 ## Gruppeinformasjon
 Gruppenummer: 134
