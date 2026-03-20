@@ -2,7 +2,7 @@ import sqlite3
 import os
 
 def execute_file(path):
-    base_path = os.path.dirname(os.path.dirname(__file__))
+    base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
     
     db_path = os.path.join(base_path, "DB2.db")
 
@@ -17,6 +17,6 @@ def execute_file(path):
     conn.commit()
     conn.close()
 
-    print(f"Added tables to database at")
+    print(f"Added data to database")
 
-execute_file("table_construction/table_construction.sql")
+execute_file("usecase/usecase_1/data_construction.sql")
