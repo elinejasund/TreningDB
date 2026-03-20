@@ -70,7 +70,7 @@ def run_python_file(path, args=None):
     if result.returncode != 0:
         print(f"Python script exited med non-zero status {result.returncode}")
     else:
-        print("Python ble kjørt uten feil.")
+        return
 
 
 def usecase_1():
