@@ -80,6 +80,7 @@ INSERT OR IGNORE INTO bike VALUES
 
 -- Brukere
 INSERT OR IGNORE INTO member VALUES
+(1, "Eline Jåsund", "eline.jasund@ntnu.no" , "12345678"),
 (2, "Gina Giske", "gina.giske@ntnu.no", "22334455"),
 (3, "Catrin Johansen", "catrin-johansen@ntnu.no", "33445566"),
 (4, "Tobi Haugrønning", "tbh@ntnu.no", "44556677"),
@@ -176,6 +177,14 @@ INSERT OR IGNORE INTO activity_type (id, name, description) VALUES
 (2, "Spin45", "En variert spinningtime med 2-3 arbeidsperioder som passer for alle. Perfekt for deg som er ny på spinning! Du styrer intensiteten selv, og vi bruker takta til å tråkke oss gjennom timen."),
 (3, "Spin8x3", "En forutsigbar intervalltime med 8 intervaller på 3 minutter hver, der du sitter og står annethvert drag. 90-120 sek pause mellom hvert intervall. God oppvarming og nedsykling inkludert."),
 (4, "Spin4x4", "En forutsigbar intervalltime: 4 stående intervaller på 4 minutter hver, med ca 2 minutter aktiv pause mellom hvert drag. God oppvarming og nedsykling inkludert.");
+
+INSERT OR IGNORE INTO group_lesson_booking (member_id, group_lesson_id, time_booked) VALUES
+(11, 1, '2026-03-16 07:00:00'),
+(11, 6, '2026-03-17 07:00:00'),
+(11, 9, '2026-03-18 16:15:00'),
+(2, 1, '2026-03-16 07:00:00'),
+(2, 6, '2026-03-17 07:00:00'),
+(2, 9, '2026-03-18 16:15:00');
 
 -- Use case 5
 INSERT OR IGNORE INTO group_lesson_participates (member_id, group_lesson_id, date) VALUES
