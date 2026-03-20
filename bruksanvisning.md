@@ -42,7 +42,7 @@ I brukstilfelle 3 registrerer man oppmøte for Johnny på gruppetimen fra brukst
 ![Resultat av output for Brukstilfelle 3](images/usecase_3_result.png)
 
 ### Brukstilfelle 4
-Ved å velge brukstilfelle 4 vil man kunne se en ukentlig timeplan for gitt tidsperiode. Inputen man skal gi her er for eksempel *mandag*.
+Ved å velge brukstilfelle 4 vil man kunne se en ukentlig timeplan for gitt tidsperiode. Inputen man skal gi her er for eksempel *mandag* og *12* som vil vise dataen i fra mandag til søndag i uke 12.
 
 Som det står forklart når man kjører dette brukstilfellet er det kun lagt inn eksempeldata for mandag og tirsdag i uke 12, og ved å velge andre dager enn dette vil man ikke få noen resultater.
 
