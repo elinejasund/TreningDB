@@ -51,8 +51,8 @@ TreningDB/
 │       └── usecase_8.sql
 │
 ├── .gitignore
-├── TreningDB.db
 ├── README.md
+├── TreningDB.db
 └── usecase_interface.py
 ```
 
