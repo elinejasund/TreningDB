@@ -172,7 +172,7 @@ For å løse denne oppgaven valgte gruppen å sjekke hvilke to medlemmer som har
 * Dersom brukertilfelle spesifiserte at handlingen skulle håndtere et tilfelle for Johnny har vi valgt at tekstapplikasjonen kun skal utføre dette for Johnny, selv om fler av python filene tillater å utføre handlingen for ulike brukere. Dette er gjort slik at det er lett for brukere å utføre handlingen uten å måtte skrive inn informasjon angående gruppetimer eller brukere. 
 
 ## Endringer gjort i skjema fra første innlevering
-- La til time_booked i group_lesson_booking -> viste seg å være nødvendig, misforstod oppgaven
+- La til time_booked i group_lesson_booking. Denne endringen viste seg å ikke være nødvendig, men ble gjennomført på grunn av en misforståelse av oppgavebeskrivelsen. Endringen ble beholdt da dette ikke forstyrrer BCNF formatet og gjorde group_lesson_booking og group_lesson_registration mer uniforme.
 - Ingen andre endringer
 
 ## KI deklarasjon
