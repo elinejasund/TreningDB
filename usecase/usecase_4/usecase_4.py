@@ -1,6 +1,17 @@
 from datetime import date, datetime
 import sqlite3
 from enum import Enum
+import sys
+
+mapping = {
+    "mandag": "MONDAY",
+    "tirsdag": "TUESDAY",
+    "onsdag": "WEDNESDAY",
+    "torsdag": "THURSDAY",
+    "fredag": "FRIDAY",
+    "lørdag": "SATURDAY",
+    "søndag": "SUNDAY"
+}
 
 class Weekday(Enum):
     MONDAY = 1
@@ -13,6 +24,8 @@ class Weekday(Enum):
 
 # opens the file
 def getWeeklySchedule(start_day: int | str, week: int):
+    start_day_no = start_day
+    start_day = mapping.get(start_day.lower(), start_day)
     weekday = Weekday(start_day) if isinstance(start_day, int) else Weekday[start_day.upper()]
 
     start_date = date.fromisocalendar(2026, week, weekday.value)  # (year, week, day of week)
@@ -21,7 +34,7 @@ def getWeeklySchedule(start_day: int | str, week: int):
     end_date = date.fromisocalendar(2026, week + 1, Weekday.MONDAY.value)
     end_datetime = datetime(end_date.year, end_date.month, end_date.day)
 
-    # Assumes that group lesson is the table of interest
+    # Assumes that group lesson is the table of interest, not visits
 
     with sqlite3.connect("DB2.db") as con:
         cur = con.cursor()
@@ -33,13 +46,22 @@ def getWeeklySchedule(start_day: int | str, week: int):
         WHERE time BETWEEN ? AND ?
         ORDER BY time
         """
-        cur.execute(query, (start_datetime, end_datetime))
+        cur.execute(query, (
+        start_datetime.strftime("%Y-%m-%d %H:%M:%S"),
+        end_datetime.strftime("%Y-%m-%d %H:%M:%S")))
 
         # To get a prettier output:
         rows = cur.fetchall()
+        if len(rows) == 0:
+            print("Ingen gruppetimer i dette tidsintervallet.")
+            return
+        
+        print(f"Timeplan for uke 12 f.o.m. {start_day_no}:")
         for row in rows:
             print("Gruppetime: "+row[0] + "       " + "Tid: " + row[1])
 
-# Assumes that the task asks for the schedule of the 12th week of 2026, starting on the input day
+if __name__ == "__main__":
+    start_day = sys.argv[1]
+    week = int(sys.argv[2])
 
-getWeeklySchedule("monday", 12)
+    getWeeklySchedule(start_day, week)

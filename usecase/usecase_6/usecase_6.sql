@@ -1,7 +1,7 @@
 INSERT OR IGNORE INTO penalties (member_id, date) VALUES
-((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('2026-02-27 16:30')),
-((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('2026-03-07 16:30')),
-((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('2026-03-15 16:30'));
+((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('now', '-10 days')),
+((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('now', '-5 days')),
+((SELECT id FROM member WHERE member.mail = 'johnny@stud.ntnu.no'), datetime('now', '-1 day'));
 
 WITH
 target_member AS (

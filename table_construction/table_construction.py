@@ -17,6 +17,6 @@ def execute_file(path):
     conn.commit()
     conn.close()
 
-    print(f"Added tables to database at")
+    print(f"Tabeller ble lagt til i databasen")
 
 execute_file("table_construction/table_construction.sql")
