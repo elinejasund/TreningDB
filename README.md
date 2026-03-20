@@ -128,7 +128,6 @@ Vi har valgt å legge til brukertilfelle 0 for å gi bruker en mulighet til å l
 
 ![Resultat av output for brukertilfelle 8](images/usecase_8_result.png)
 
-
 ## Merknader til implementasjon av databasen
 * Det er ikke implementert kontroll av dato og tidspunkt for booking eller registrering av oppmøte før operasjonene utføres. Dette er et bevisst valg, ettersom det er usikkert når brukeren vil kjøre brukstilfellene og vi bruker nåværende dato for disse tilfellene. Vi ønsket å unngå feilmeldinger dersom det forsøkes å melde seg på eller registrere oppmøte utenfor de definerte tidsfristene. Dersom vi kunne forutsatt at brukeren kun interagerer med systemet innenfor gyldige tidsrom, ville slike kontroller blitt implementert i Python filene, på samme måte som andre ugyldige tilfeller håndteres.
 * Dersom brukertilfelle spesifiserte at handlingen skulle håndtere et tilfelle for Johnny har vi valgt at tekstapplikasjonen kun skal utføre dette for Johnny, selv om fler av python filene tillater å utføre handlingen for ulike brukere. Dette er gjort slik at det er lett for brukere å utføre handlingen uten å måtte skrive inn informasjon angående gruppetimer eller brukere. 
