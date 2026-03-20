@@ -33,7 +33,7 @@ def run_sql_file(path):
     if not os.path.exists(sql_file):
         print(f"ERROR: SQL fil ikke funnet: {sql_file}")
         return
-    print(f"Kjører SQL file: {sql_file}")
+    print(f"Kjører SQL fil: {sql_file}")
     import sqlite3
     db_path = os.path.join(BASE_DIR, 'DB2.db')
     if not os.path.exists(db_path):
@@ -78,7 +78,7 @@ def usecase_1():
     if prompt_yes_no("Ønsker du å kjøre den initiale SQL data inserten?"):
         run_sql_file(USECASES['1'])
     else:
-        print("Usecase 1 kansellert.")
+        return
 
 
 def usecase_2():
@@ -91,7 +91,7 @@ def usecase_2():
     if prompt_yes_no('Ønsker du å booke denne treningen nå?'):
         run_python_file(USECASES['2'])
     else:
-        print('Usecase 2 kansellert.')
+        return
 
 
 def usecase_3():
@@ -103,7 +103,7 @@ def usecase_3():
     if prompt_yes_no('Ønsker du å registrere oppmøte nå?'):
         run_python_file(USECASES['3'])
     else:
-        print('Usecase 3 kansellert.')
+        return
 
 
 def usecase_4():
@@ -115,7 +115,7 @@ def usecase_4():
     if prompt_yes_no('Ønsker du å kjøre ukentlig timeplan nå?'):
         run_python_file(USECASES['4'])
     else:
-        print('Usecase 4 kansellert.')
+        return
 
 
 def usecase_5():
@@ -127,7 +127,7 @@ def usecase_5():
     if prompt_yes_no('Ønsker du å kjøre brukeren sin besøkshistorie SQL nå?'):
         run_sql_file(USECASES['5'])
     else:
-        print('Usecase 5 kansellert.')
+        return
 
 
 def usecase_6():
@@ -138,7 +138,7 @@ def usecase_6():
         if prompt_yes_no('Ønsker du å teste svarteliste ved å prøve en booking (usecase 2)?'):
             usecase_2()
     else:
-        print('Usecase 6 kansellert.')
+        return
 
 
 def usecase_7():
@@ -153,7 +153,7 @@ def usecase_8():
     if prompt_yes_no('Ønsker du å kjøre joint training pair analysis SQL nå?'):
         run_python_file(USECASES['8'])
     else:
-        print('Usecase 8 kansellert.')
+       return
 
 
 def show_menu():
