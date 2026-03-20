@@ -93,6 +93,7 @@ Dersom man har kjørt alle brukstilfellene eller ønsker å starte databasen på
 
 ### Brukertilfelle 0
 Vi har valgt å legge til brukertilfelle 0 for å gi bruker en mulighet til å laste inn de tomme tabellene i databasen. Dette er gjort separat ifra å legge inn dataen i databasen slik at bruker kan gjøre brukertilfelle 0 dersom de ønsker å tømme databasen fra data. 
+Vi har valgt å legge til brukertilfelle 0 for å gi bruker en mulighet til å laste inn de tomme tabellene i databasen. Dette er gjort separat ifra å legge inn dataen i databasen slik at bruker kan gjøre brukertilfelle 0 dersom de ønsker å tømme databasen fra data. 
 
 ![Resultat av output for brukertilfelle 0](images/usecase_0_result.png)
 
@@ -127,6 +128,7 @@ Vi har valgt å legge til brukertilfelle 0 for å gi bruker en mulighet til å l
 ### Brukertilfelle 8
 
 ![Resultat av output for brukertilfelle 8](images/usecase_8_result.png)
+
 
 ## Merknader til implementasjon av databasen
 * Det er ikke implementert kontroll av dato og tidspunkt for booking eller registrering av oppmøte før operasjonene utføres. Dette er et bevisst valg, ettersom det er usikkert når brukeren vil kjøre brukstilfellene og vi bruker nåværende dato for disse tilfellene. Vi ønsket å unngå feilmeldinger dersom det forsøkes å melde seg på eller registrere oppmøte utenfor de definerte tidsfristene. Dersom vi kunne forutsatt at brukeren kun interagerer med systemet innenfor gyldige tidsrom, ville slike kontroller blitt implementert i Python filene, på samme måte som andre ugyldige tilfeller håndteres.
