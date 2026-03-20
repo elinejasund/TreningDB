@@ -33,10 +33,13 @@ def getWeeklySchedule(start_day: int | str, week: int):
         WHERE time BETWEEN ? AND ?
         ORDER BY time
         """
-        cur.execute(query, (start_datetime, end_datetime))
+        cur.execute(query, (
+        start_datetime.strftime("%Y-%m-%d %H:%M:%S"),
+        end_datetime.strftime("%Y-%m-%d %H:%M:%S")))
 
         # To get a prettier output:
         rows = cur.fetchall()
+        print("Timeplan for uke 12 f.o.m. mandag:")
         for row in rows:
             print("Gruppetime: "+row[0] + "       " + "Tid: " + row[1])
 
