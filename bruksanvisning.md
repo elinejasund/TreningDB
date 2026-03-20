@@ -25,21 +25,25 @@ Vi har valgt å legge til *Brukstilfelle 0* for å gi bruker mulighet til å lag
 *For at applikasjonen skal kjøre må brukstilfelle 0 kjøres først*
 
 ![Resultat av output for Brukstilfelle 0](images/usecase_0_result.png)
+*Resultat av å kjøre brukertilfelle 0*
 
 ### Brukstilfelle 1
 Brukstilfelle 1 fyller databasen med eksempeldata som forklart i brukstilfellet.
 
 ![Resultat av output for Brukstilfelle 1](images/usecase_1_result.png)
+*Resultat av å kjøre brukertilfelle 1*
 
 ### Brukstilfelle 2
 Ved å kjøre brukstilfelle 2 booker man en Spin60 time for Johnny tirsdag 17. mars kl. 18:30. Output vil her være en bekreftelse på at bookingen er gjennomført. Dersom man prøver å booke en time før eksempeldataen er satt inn vil man få en feilmelding.
 
 ![Resultat av output for Brukstilfelle 2](images/usecase_2_result.png)
+*Resultat av å kjøre brukertilfelle 2*
 
 ### Brukstilfelle 3
 I brukstilfelle 3 registrerer man oppmøte for Johnny på gruppetimen fra brukstilfelle 2. Dersom man prøver å registrere oppmøte før man har booket timen hans vil man få en melding om at registreringen ikke kunne gjennomføres fordi man ikke er påmeldt timen.
 
 ![Resultat av output for Brukstilfelle 3](images/usecase_3_result.png)
+*Resultat av å kjøre brukertilfelle 3*
 
 ### Brukstilfelle 4
 Ved å velge brukstilfelle 4 vil man kunne se en ukentlig timeplan for gitt tidsperiode. Inputen man skal gi her er for eksempel *mandag* og *12* som vil vise dataen i fra mandag til søndag i uke 12.
@@ -47,16 +51,19 @@ Ved å velge brukstilfelle 4 vil man kunne se en ukentlig timeplan for gitt tids
 Som det står forklart når man kjører dette brukstilfellet er det kun lagt inn eksempeldata for mandag og tirsdag i uke 12, og ved å velge andre dager enn dette vil man ikke få noen resultater.
 
 ![Resultat av output for Brukstilfelle 4](images/usecase_4_result.png)
+*Resultat av å kjøre brukertilfelle 4*
 
 ### Brukstilfelle 5
 Brukstilfelle 5 viser besøkshistorien til Johnny.
 
 ![Resultat av output for Brukstilfelle 5](images/usecase_5_result.png)
+*Resultat av å kjøre brukertilfelle 5*
 
 ### Brukstilfelle 6
 I brukstilfelle 6 testes funksjonaliteten for å svarteliste et medlem. Etter man har valgt å svarteliste Johnny ved å gi han 3 prikker kan man velge å prøve å booke en time for han for å se at svartelistingen har blitt implementert.
 
 ![Resultat av output for Brukstilfelle 6](images/usecase_6_result.png)
+*Resultat av å kjøre brukertilfelle 6*
 
 ### Brukstilfelle 7
 Brukstilfelle 7 gir de medlemmene som har deltatt på flest gruppetimer i den gitte måneden. For å kjøre denne anbefales det å skrive følgende:
@@ -66,6 +73,7 @@ Brukstilfelle 7 gir de medlemmene som har deltatt på flest gruppetimer i den gi
 Det er i denne perioden det er mest eksempeldata å basere spørringen på.
 
 ![Resultat av output for Brukstilfelle 7](images/usecase_7_result.png)
+*Resultat av å kjøre brukertilfelle 7*
 
 ### Brukstilfelle 8
 Ved å kjøre brukstilfelle 8 får man vite hvilke medlemmer som trener sammen, og hvor mange treninger de har vært på sammen.
@@ -73,3 +81,4 @@ Ved å kjøre brukstilfelle 8 får man vite hvilke medlemmer som trener sammen, 
 For å løse denne oppgaven valgte gruppen å sjekke hvilke to medlemmer som har ankommet senteret sammen (innenfor 1 minutt av hverandre) mer enn 3 ganger de siste 3 månedene.
 
 ![Resultat av output for Brukstilfelle 8](images/usecase_8_result.png)
+*Resultat av å kjøre brukertilfelle 8*
