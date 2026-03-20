@@ -5,6 +5,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 USECASES = {
+    "0": "table_construction/table_construction.py",
     "1": "usecase/usecase_1/usecase_1.py",
     "2": "usecase/usecase_2/usecase_2.py",
     "3": "usecase/usecase_3/usecase_3.py",
@@ -72,6 +73,13 @@ def run_python_file(path, args=None):
     else:
         return
 
+
+def usecase_0():
+    print("Usecase 0: Opprettelse av tabeller i databasen.")
+    if prompt_yes_no("Ønsker du å kjøre SQL for å opprette tabeller i databasen?"):
+        run_python_file(USECASES['0'])
+    else:
+        return
 
 def usecase_1():
     print("Usecase 1: Sett inn basedata (treningssenter, saler, sykler, brukere, trenere, treninger) via SQL.")
@@ -156,6 +164,7 @@ def show_menu():
     print("""
 ============ Meny ============
 Velg et brukertilfelle å kjøre:
+0. Opprettelse av tabeller i databasen
 1. Sett inn grunnleggende data
 2. Spin60 booking
 3. Registrering av oppmøte
@@ -175,6 +184,8 @@ def main():
         match choice:
             case 'q':
                 break
+            case '0':
+                usecase_0()
             case '1':
                 usecase_1()
             case '2':
