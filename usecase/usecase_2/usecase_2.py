@@ -1,7 +1,7 @@
 import sqlite3
 
 def find_group_lesson(activity: str, time: str, center: str):
-     with sqlite3.connect("DB2.db") as con:
+     with sqlite3.connect("TreningDB.db") as con:
         cursor = con.cursor()
 
         #Find activity_type_id
@@ -39,7 +39,7 @@ def find_group_lesson(activity: str, time: str, center: str):
         return lesson_id, capacity
 
 def book_group_lesson(member: str, lesson_id: int, capacity: int):
-    with sqlite3.connect("DB2.db") as con:
+    with sqlite3.connect("TreningDB.db") as con:
         cursor = con.cursor()
 
         # Find member
