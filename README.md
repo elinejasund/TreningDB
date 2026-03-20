@@ -1,4 +1,4 @@
-# DB2
+# DB2 Gruppe 134
 Dette prosjektet inneholder Python og SQL filer for å konstruere og bruke en DB Browser for SQLite i forbindelse med prosjektet for TDT4145 Datamodellering og databasesystemer. Prosjektet modellerer en database for SiT Trening i Trondheim og har implementert kode for å fullføre flere ulike brukertilfeller.
 
 ## Filstruktur
