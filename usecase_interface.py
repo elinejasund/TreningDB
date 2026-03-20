@@ -154,8 +154,8 @@ def usecase_8():
 
 def show_menu():
     print("""
-===== Usecase Interface =====
-Choose a usecase (1-8) to run:
+============ Meny ============
+Velg et brukertilfelle å kjøre:
 1. Sett inn grunnleggende data
 2. Spin60 booking
 3. Registrering av oppmøte
