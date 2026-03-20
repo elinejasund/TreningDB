@@ -36,7 +36,7 @@ def run_sql_file(path):
         return
     print(f"Kjører SQL fil: {sql_file}")
     import sqlite3
-    db_path = os.path.join(BASE_DIR, 'DB2.db')
+    db_path = os.path.join(BASE_DIR, 'TreningDB.db')
     if not os.path.exists(db_path):
         print(f"ERROR: Database fil ikke funnet: {db_path}")
         return

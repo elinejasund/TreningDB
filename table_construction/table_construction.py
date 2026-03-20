@@ -4,7 +4,7 @@ import os
 def execute_file(path):
     base_path = os.path.dirname(os.path.dirname(__file__))
     
-    db_path = os.path.join(base_path, "DB2.db")
+    db_path = os.path.join(base_path, "TreningDB.db")
 
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()

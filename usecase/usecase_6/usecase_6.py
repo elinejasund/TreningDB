@@ -1,6 +1,6 @@
 import sqlite3
 
-con = sqlite3.connect('DB2.db')
+con = sqlite3.connect('TreningDB.db')
 cursor = con.cursor()
 
 def is_blacklisted(member_id):

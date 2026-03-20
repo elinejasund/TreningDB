@@ -1,7 +1,7 @@
 import sqlite3
 import sys
 
-con = sqlite3.connect('DB2.db')
+con = sqlite3.connect('TreningDB.db')
 cursor = con.cursor()
 
 con.commit()

@@ -36,7 +36,7 @@ def getWeeklySchedule(start_day: int | str, week: int):
 
     # Assumes that group lesson is the table of interest, not visits
 
-    with sqlite3.connect("DB2.db") as con:
+    with sqlite3.connect("TreningDB.db") as con:
         cur = con.cursor()
         query = """
         SELECT name, time

@@ -1,7 +1,7 @@
 import sqlite3
 
 # open the file – use the correct relative/absolute path
-with sqlite3.connect("DB2.db") as con:
+with sqlite3.connect("TreningDB.db") as con:
     cur = con.cursor()
 
     query = """
